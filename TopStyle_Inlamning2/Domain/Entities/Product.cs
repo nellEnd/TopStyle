@@ -13,6 +13,5 @@ namespace TopStyle_Inlamning2.Domain.Entities
         public string Description { get; set; }
         public int Price { get; set; }
         public virtual Category Category { get; set; }
-        public virtual User User { get; set; }
     }
 }

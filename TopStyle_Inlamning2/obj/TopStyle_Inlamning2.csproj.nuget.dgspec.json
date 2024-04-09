@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DemosC#\\ASP.NET1\\Inlämningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj": {}
+    "C:\\Users\\nelly\\OneDrive\\Skrivbord\\ASP.NET 1\\Inlamningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj": {}
   },
   "projects": {
-    "C:\\DemosC#\\ASP.NET1\\Inlämningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj": {
+    "C:\\Users\\nelly\\OneDrive\\Skrivbord\\ASP.NET 1\\Inlamningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DemosC#\\ASP.NET1\\Inlämningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj",
+        "projectUniqueName": "C:\\Users\\nelly\\OneDrive\\Skrivbord\\ASP.NET 1\\Inlamningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj",
         "projectName": "TopStyle_Inlamning2",
-        "projectPath": "C:\\DemosC#\\ASP.NET1\\Inlämningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj",
+        "projectPath": "C:\\Users\\nelly\\OneDrive\\Skrivbord\\ASP.NET 1\\Inlamningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\TopStyle_Inlamning2.csproj",
         "packagesPath": "C:\\Users\\nelly\\.nuget\\packages\\",
-        "outputPath": "C:\\DemosC#\\ASP.NET1\\Inlämningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\obj\\",
+        "outputPath": "C:\\Users\\nelly\\OneDrive\\Skrivbord\\ASP.NET 1\\Inlamningar\\TopStyle_Inlamning2\\TopStyle_Inlamning2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.3, )"
