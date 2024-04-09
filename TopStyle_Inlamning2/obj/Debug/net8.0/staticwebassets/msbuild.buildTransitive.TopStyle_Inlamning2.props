@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\TopStyle_Inlamning2.props" />
+</Project>
