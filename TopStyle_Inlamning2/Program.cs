@@ -40,6 +40,8 @@ builder.Services.AddDbContext<TopStyleContext>(
 
 builder.Services.AddTransient<IProductService, ProductService>();
 builder.Services.AddTransient<IProductRepo, ProductRepo>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepo, UserRepo>();
 
 var app = builder.Build();
 

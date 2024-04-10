@@ -6,5 +6,6 @@ namespace TopStyle_Inlamning2.Data.Interfaces
     public interface IUserRepo
     {
         Task<User> Login(UserLoginDTO user);
+        Task CreateUser(User user);
     }
 }

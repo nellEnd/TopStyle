@@ -13,10 +13,19 @@ namespace TopStyle_Inlamning2.Data.Repos
             _context = context;
         }
 
+        public async Task CreateUser(User user)
+        {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+            //return user;
+        }
+
         public async Task<User> Login(UserLoginDTO user)
         {
-            return _context.Users.FirstOrDefault(u => u.Username.ToLower() == user.UserName.ToLower()
+            var loginUser = _context.Users.FirstOrDefault(u => u.Username.ToLower() == user.UserName.ToLower()
             && u.Password.ToLower() == user.Password.ToLower());
+
+            return loginUser;
         }
     }
 }
