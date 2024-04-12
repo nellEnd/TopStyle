@@ -16,9 +16,6 @@ namespace TopStyle_Inlamning2.Domain.Profiles
                 .ForMember(dest => dest.Password,
                 option => option.MapFrom(src => src.Password))
                 .ReverseMap();
-                
-                
-   
         }                           
     }
 }

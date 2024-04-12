@@ -26,7 +26,7 @@ namespace TopStyle_Inlamning2.Core.Services
         {
             var newUser = _mapper.Map<User>(user);
 
-           await _repo.CreateUser(newUser);
+            await _repo.CreateUser(newUser);
 
             //return _mapper.Map<UserLoginDTO> (await _repo.CreateUser(newUser));
         }

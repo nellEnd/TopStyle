@@ -264,3 +264,8 @@ C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopS
 C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\obj\Debug\net8.0\ref\TopStyle_Inlamning2.dll
 C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\nelly\OneDrive\Skrivbord\ASP.NET 1\Inlamningar\TopStyle_Inlamning2\TopStyle_Inlamning2\obj\Debug\net8.0\TopStyle_Inlamning2.MvcApplicationPartsAssemblyInfo.cs
