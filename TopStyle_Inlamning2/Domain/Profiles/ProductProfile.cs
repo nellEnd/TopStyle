@@ -16,8 +16,8 @@ namespace TopStyle_Inlamning2.Domain.Profiles
                 option => option.MapFrom(src => src.Description))
                 .ForMember(dest => dest.Price,
                 option => option.MapFrom(src => src.Price))
-                .ForMember(dest => dest.CategoryName,
-                option => option.MapFrom(src => src.Category.CategoryName)).ReverseMap();
+                .ForMember(dest => dest.CategoryId,
+                option => option.MapFrom(src => src.Category.CategoryId)).ReverseMap();
         }
     }
 }

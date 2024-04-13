@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TopStyle_Inlamning2.Core.Interfaces;
 using TopStyle_Inlamning2.Domain.DTO;
 using TopStyle_Inlamning2.Domain.Entities;
@@ -43,6 +44,23 @@ namespace TopStyle_Inlamning2.Controllers
             {
                 await _service.CreateUser(user);
                 return Ok("User successfully created");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpGet]
+        [Route("/api/user")]
+        public async Task<IActionResult> GetUser()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            try
+            {
+                var user = await _service.GetUser(userId);
+                return Ok(user);
             }
             catch (Exception ex)
             {

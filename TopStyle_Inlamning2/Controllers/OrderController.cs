@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 using TopStyle_Inlamning2.Core.Interfaces;
 using TopStyle_Inlamning2.Domain.DTO;
 using TopStyle_Inlamning2.Domain.Entities;
@@ -9,7 +10,7 @@ namespace TopStyle_Inlamning2.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-   // [Authorize(Roles = "Admin")]
+    [Authorize(Roles = "Admin")]
     public class OrderController : ControllerBase
     {
         private readonly IOrderService _service;
@@ -19,9 +20,10 @@ namespace TopStyle_Inlamning2.Controllers
             _service = service;
         }
 
-        [HttpGet("{userId}")]
-        public async Task <IActionResult> Get(int userId)
+        [HttpGet]
+        public async Task <IActionResult> GetOrders()
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
             var orders = await _service.GetOrders(userId);
             return Ok(orders);
         }

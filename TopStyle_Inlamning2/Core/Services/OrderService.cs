@@ -17,19 +17,20 @@ namespace TopStyle_Inlamning2.Core.Services
             _mapper = mapper;
         }
 
-        public async Task<List<Order>> GetOrders(int userId)
+        public async Task<List<OrderViewDTO>> GetOrders(string userId)
         {
-            var ordersList = new List<PlaceOrderDTO>();
 
-            var orders = await _repo.GetOrders(userId);
+            var dtoList = new List<OrderViewDTO>();
+
+            var orders = await _repo.GetOrders(int.Parse(userId));
 
             foreach (var order in orders)
             {
-                ordersList.Add(_mapper.Map<PlaceOrderDTO>(order));
+                dtoList.Add(_mapper.Map<OrderViewDTO>(order));
             }
 
-            //return ordersList;
-            return orders;
+            return dtoList;
+            //return orders;
         }
 
         public async Task PlaceOrder(PlaceOrderDTO order)

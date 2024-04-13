@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TopStyle_Inlamning2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ca51608d4ec0df0cd87de11f61d71a7d394d453")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62f7cbda1f96f0f340d8cc1a0f11292605c1e50a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TopStyle_Inlamning2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TopStyle_Inlamning2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

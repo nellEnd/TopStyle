@@ -15,7 +15,10 @@ namespace TopStyle_Inlamning2.Data.Repos
 
         public async Task<List<Order>> GetOrders(int userId)
         {
-            var orders = _context.Orders.Where(o => o.User.UserId == userId).Include(r => r.Products).ToListAsync();
+            var orders = _context.Orders.Where(o => o.User.UserId == userId)
+                .Include(o => o.Products)
+                .ThenInclude(p => p.Category)
+                .ToListAsync();
             return await orders;
         }
 

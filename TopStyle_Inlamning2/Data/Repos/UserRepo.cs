@@ -20,6 +20,12 @@ namespace TopStyle_Inlamning2.Data.Repos
             //return user;
         }
 
+        public async Task<User> GetUser(int userId)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
+            return user;
+        }
+
         public async Task<User> Login(UserLoginDTO user)
         {
             var loginUser = _context.Users.FirstOrDefault(u => u.Username.ToLower() == user.UserName.ToLower()

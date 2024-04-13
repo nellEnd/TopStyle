@@ -6,7 +6,7 @@ namespace TopStyle_Inlamning2.Core.Interfaces
     public interface IOrderService
     {
         Task PlaceOrder(PlaceOrderDTO order);
-        Task <List<Order>> GetOrders(int userId);
+        Task <List<OrderViewDTO>> GetOrders(string userId);
 
     }
 }

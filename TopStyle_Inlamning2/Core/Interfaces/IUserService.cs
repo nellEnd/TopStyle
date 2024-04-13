@@ -7,5 +7,6 @@ namespace TopStyle_Inlamning2.Core.Interfaces
     {
         Task<object> Login(UserLoginDTO user);
         Task CreateUser (UserDTO user);
+        Task <UserDTO>GetUser (string userId);
     }
 }

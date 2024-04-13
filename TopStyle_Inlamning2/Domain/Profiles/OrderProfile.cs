@@ -18,16 +18,16 @@ namespace TopStyle_Inlamning2.Domain.Profiles
                    .ReverseMap();*/
 
             CreateMap<Order, PlaceOrderDTO>()
-        .ForMember(dest => dest.OrderId, opt => opt.MapFrom(src => src.OrderId))
-        .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
-        .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.Products.Select(p => p.ProductId).ToList()))
-        .ReverseMap()
-        .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.Products));
+                .ForMember(dest => dest.OrderId, opt => opt.MapFrom(src => src.OrderId))
+                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
+                .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.Products.Select(p => p.ProductId).ToList()))
+                .ReverseMap()
+                .ForMember(dest => dest.Products, opt => opt.MapFrom(src => src.Products));
 
             CreateMap<PlaceOrderDTO, Order>()
-        .ForMember(dest => dest.OrderId, opt => opt.MapFrom(src => src.OrderId))
-        .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
-        .ForMember(dest => dest.Products, opt => opt.Ignore()); // Ignore Products during reverse mapping
+                .ForMember(dest => dest.OrderId, opt => opt.MapFrom(src => src.OrderId))
+                .ForMember(dest => dest.UserId, opt => opt.MapFrom(src => src.UserId))
+                .ForMember(dest => dest.Products, opt => opt.Ignore()); // Ignore Products during reverse mapping
 
         }
     }

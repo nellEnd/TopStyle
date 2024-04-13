@@ -31,15 +31,25 @@ namespace TopStyle_Inlamning2.Core.Services
             //return _mapper.Map<UserLoginDTO> (await _repo.CreateUser(newUser));
         }
 
+        public async Task<UserDTO> GetUser(string userId)
+        {
+            var user = await _repo.GetUser(int.Parse(userId));
+
+            var dtoUser = _mapper.Map<UserDTO>(user);
+
+            return dtoUser;
+        }
+
         public async Task<object> Login(UserLoginDTO userDTO)
         {
             var user = await _repo.Login(userDTO);
 
             if (user == null)
-                throw new Exception("Login failed.");
+                return null;
 
             List<Claim> claims = new List<Claim>();
             claims.Add(new Claim(ClaimTypes.Role, "Admin"));
+            claims.Add(new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()));
 
             // Hantera nyckeln i Aure keyvault ist!!!!!!!!!!
             var secretKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("mysecretKey12345!#123456789101112"));
@@ -56,7 +66,6 @@ namespace TopStyle_Inlamning2.Core.Services
             var tokenString = new JwtSecurityTokenHandler().WriteToken(tokenOptions);
 
             return new {Token= tokenString};
-
         }
     }
 }

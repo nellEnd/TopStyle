@@ -17,6 +17,7 @@ namespace TopStyle_Inlamning2.Data.Repos
 
         public async Task<List<Product>> GetProducts()
         {
+
            return await _context.Products.Include(p => p.Category).ToListAsync();
         }
 
